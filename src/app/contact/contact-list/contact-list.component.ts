@@ -20,4 +20,8 @@ export class ContactListComponent implements OnInit {
     console.log(this.contacts);
   }
 
+  onContactSelected(contact: Contact): void {
+    console.log(contact);
+    // alert(contact.firstName);
+  }
 }

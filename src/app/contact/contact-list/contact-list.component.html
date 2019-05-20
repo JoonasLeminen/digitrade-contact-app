@@ -1,5 +1,8 @@
-<div *ngFor="let contact of contacts">
+<div *ngFor="let c of contacts">
   <!-- {{contact.firstName}} {{contact.lastName}}-->
-  <dtca-contact-list-item [contact]="contact"></dtca-contact-list-item>
+  <dtca-contact-list-item
+    [contact]="c"
+    (selected)="onContactSelected($event)">
+  </dtca-contact-list-item>
 </div>
 
