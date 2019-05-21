@@ -6,8 +6,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContactListComponent } from './contact/contact-list/contact-list.component';
 import { ContactListItemComponent } from './contact/contact-list/contact-list-item/contact-list-item.component';
-import {MatCardModule} from '@angular/material';
+import {MatButtonModule, MatCardModule, MatInputModule} from '@angular/material';
 import { ContactDetailComponent } from './contact/contact-detail/contact-detail.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,11 @@ import { ContactDetailComponent } from './contact/contact-detail/contact-detail.
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    MatCardModule
+    MatCardModule,
+    MatInputModule,
+    BrowserAnimationsModule,
+    FlexLayoutModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
