@@ -2,18 +2,22 @@
 .form-detail {
   width: 200px;
 }
-*/
 
 .width-detail {
-  width: 200px;
+  width: 500px;
+}
+*/
+
+.form-card {
+  width: 300px;
+}
+
+.fabDetail {
+  float: right;
+  margin-top: 10px;
 }
 
 .button {
   border: none;
   background: transparent;
 }
-/*
-.form-card {
-  padding: 30px;
-}
-*/
