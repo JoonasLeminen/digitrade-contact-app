@@ -10,6 +10,7 @@ import {MatButtonModule, MatCardModule, MatInputModule} from '@angular/material'
 import { ContactDetailComponent } from './contact/contact-detail/contact-detail.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     MatInputModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

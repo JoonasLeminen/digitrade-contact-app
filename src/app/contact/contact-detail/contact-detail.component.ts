@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Contact} from '../contact';
+/*import {ContactService} from '../services/contact.service';*/
 
 @Component({
   selector: 'dtca-contact-detail',
@@ -9,11 +10,12 @@ import {Contact} from '../contact';
 export class ContactDetailComponent implements OnInit {
   contact: Contact;
 
-  constructor() {
+  constructor(/*private contactService: ContactService*/) {
     this.contact = new Contact;
   }
 
   ngOnInit() {
+    /*this.contactService.get();*/
   }
 
 }

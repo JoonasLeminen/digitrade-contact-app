@@ -16,17 +16,16 @@ export class ContactListComponent implements OnInit {
     this.selectedContactName = '';
   }
 
-  ngOnInit() {
-    this.contacts = this.contactService.get();
-    console.log(this.contacts);
-    /*this.contacts.push(new Contact('Aku', 'Ankka', '0456123147'));
-    this.contacts.push(new Contact('Roope', 'Ankka', '0406513481'));
-    this.contacts.push(new Contact('Hannu', 'Hanhi', '0506234512'));
-    console.log(this.contacts);*/
-  }
-
   onContactSelected(contact: Contact): void {
     this.selectedContactName = contact.firstName + ' ' + contact.lastName;
     // alert(contact.firstName);
+  }
+
+  ngOnInit() {
+    /*this.contacts = this.contactService.get();
+    console.log(this.contacts);*/
+    this.contactService.get().subscribe((response => {
+      this.contacts = response;
+    }));
   }
 }

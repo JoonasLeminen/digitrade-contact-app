@@ -1,10 +1,12 @@
 <input value="{{selectedContactName}}" readonly>
 
-<div *ngFor="let c of contacts">
+<div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="5px">
+  <div *ngFor="let c of contacts">
   <!--{{contact.firstName}} {{contact.lastName}}-->
   <dtca-contact-list-item
     [contact]="c"
     (selected)="onContactSelected($event)">
   </dtca-contact-list-item>
+</div>
 </div>
 
