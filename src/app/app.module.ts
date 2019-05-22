@@ -11,6 +11,7 @@ import { ContactDetailComponent } from './contact/contact-detail/contact-detail.
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {HttpClientModule} from '@angular/common/http';
+import {AvatarModule} from 'ngx-avatar';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {HttpClientModule} from '@angular/common/http';
     BrowserAnimationsModule,
     FlexLayoutModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    AvatarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

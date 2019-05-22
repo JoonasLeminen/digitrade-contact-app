@@ -2,6 +2,10 @@
 <div (click)="onSelect(contact)">
   <mat-card-header>
     <mat-card-title>
+      <ngx-avatar name="{{contact.firstName}}
+  {{contact.lastName}}"></ngx-avatar>
+    </mat-card-title>
+    <mat-card-title>
   {{contact.firstName}}
   {{contact.lastName}}
     </mat-card-title>
@@ -14,9 +18,7 @@
     <button mat-icon-button class="button">
       <i class="material-icons">phone</i>
     </button>
-    {{contact.phone}}
-  </mat-card-content>
-  <mat-card-content>
+    {{contact.phone}}<br>
     <button mat-icon-button class="button">
       <i class="material-icons">location_city</i>
     </button>
