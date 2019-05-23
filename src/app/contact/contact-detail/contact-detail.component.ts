@@ -22,7 +22,7 @@ export class ContactDetailComponent implements OnInit {
 
     this.contactService.getContactById(this.contactId).subscribe(response => {
       this.contact = response;
-      console.log(this.contact);
+      console.log(this.contactId);
     });
   }
 

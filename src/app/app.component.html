@@ -1,3 +1,52 @@
-<dtca-toolbar></dtca-toolbar>
-<dtca-sidenav></dtca-sidenav>
-<router-outlet></router-outlet>
+<!--
+<mat-drawer-container class="sidenav-container">
+  <mat-drawer mode="side" opened>Sidenav sisältö tähän</mat-drawer>
+  <mat-drawer-content>
+    <dtca-toolbar></dtca-toolbar>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
+
+-->
+
+<mat-sidenav-container class="dtca-sidenav-container">
+  <mat-sidenav #sidenav align="start" [mode]="'over'" [opened]="false" class="dtca-sidenav">
+    <!-- Sidenav content -->
+    <div>
+      <div fxLayout="column" fxLayoutAlign="center center" class="dtca-sidenav-user-area">
+        <div>
+          <mat-icon class="dtca-sidenav-avatar" color="primary">account_circle</mat-icon>
+        </div>
+        <div>
+          <span>Joonas Leminen</span>
+        </div>
+      </div>
+      <mat-divider></mat-divider>
+<!--<div>
+        <mat-nav-list>
+          <mat-list-item>
+            <a routerLink="login" (click)="sidenav.toggle()">Sign out</a>
+          </mat-list-item>
+        </mat-nav-list>
+      </div>-->
+    </div>
+    <div>
+      <br><a href="www.saimia.fi">Saimian kotisivut</a>
+    </div>
+  </mat-sidenav>
+  <div fxFlexFill class="dtca-sidenav-content">
+    <!-- App content -->
+    <mat-toolbar color="primary">
+
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon class="mat-18">menu</mat-icon>
+      </button>
+      <span>Contacts app</span>
+    </mat-toolbar>
+    <!-- <dtca-toolbar (MenuClick)="sidenav.toggle()"></dtca-toolbar> -->
+    <div class="dtca-app-container">
+      <!-- App -->
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</mat-sidenav-container>
