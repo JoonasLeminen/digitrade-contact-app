@@ -25,4 +25,7 @@ export class ContactService {
     /*console.log(this.contactHttpService.get());*/
     return this.contactHttpService.get();
   }
+  getContactById(id): Observable<Contact> {
+    return this.contactHttpService.getById(id);
+  }
 }

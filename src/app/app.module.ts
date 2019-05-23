@@ -12,6 +12,14 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {HttpClientModule} from '@angular/common/http';
 import {AvatarModule} from 'ngx-avatar';
+import {RouterModule, Routes} from '@angular/router';
+
+const appRoutes: Routes = [
+{path: 'contacts', component: ContactListComponent},
+{path: 'contacts/new', component: ContactDetailComponent},
+{path: 'contacts/:id', component: ContactDetailComponent},
+{path: '', redirectTo: 'contacts', pathMatch: 'full'}
+];
 
 @NgModule({
   declarations: [
@@ -30,7 +38,9 @@ import {AvatarModule} from 'ngx-avatar';
     FlexLayoutModule,
     MatButtonModule,
     HttpClientModule,
-    AvatarModule
+    AvatarModule,
+    RouterModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

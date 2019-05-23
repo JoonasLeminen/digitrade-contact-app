@@ -8,6 +8,10 @@
 }
 */
 
+.back-card {
+  background: whitesmoke;
+}
+
 .fabDetail {
   float: right;
   margin-top: 10px;
