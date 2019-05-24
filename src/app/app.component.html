@@ -6,7 +6,6 @@
     <router-outlet></router-outlet>
   </mat-drawer-content>
 </mat-drawer-container>
-
 -->
 
 <mat-sidenav-container class="dtca-sidenav-container">
@@ -22,13 +21,13 @@
         </div>
       </div>
       <mat-divider></mat-divider>
-<!--<div>
+<div>
         <mat-nav-list>
           <mat-list-item>
             <a routerLink="login" (click)="sidenav.toggle()">Sign out</a>
           </mat-list-item>
         </mat-nav-list>
-      </div>-->
+      </div>
     </div>
     <div>
       <br><a href="www.saimia.fi">Saimian kotisivut</a>
@@ -36,14 +35,14 @@
   </mat-sidenav>
   <div fxFlexFill class="dtca-sidenav-content">
     <!-- App content -->
-    <mat-toolbar color="primary">
+    <!--<mat-toolbar color="primary">
 
       <button mat-icon-button (click)="sidenav.toggle()">
         <mat-icon class="mat-18">menu</mat-icon>
       </button>
-      <span>Contacts app</span>
-    </mat-toolbar>
-    <!-- <dtca-toolbar (MenuClick)="sidenav.toggle()"></dtca-toolbar> -->
+      <span>Digitrade kesäkoulu 2019 - Contacts app</span>
+    </mat-toolbar>-->
+    <dtca-toolbar (MenuClick)="sidenav.toggle()"></dtca-toolbar>
     <div class="dtca-app-container">
       <!-- App -->
       <router-outlet></router-outlet>

@@ -11,7 +11,7 @@ import {
   MatCardModule,
   MatDividerModule,
   MatIconModule,
-  MatInputModule, MatListItem,
+  MatInputModule, MatListModule,
   MatSidenavModule,
   MatToolbarModule
 } from '@angular/material';
@@ -22,6 +22,9 @@ import {HttpClientModule} from '@angular/common/http';
 import {AvatarModule} from 'ngx-avatar';
 import {RouterModule, Routes} from '@angular/router';
 import { ToolbarComponent } from './contact/ui/toolbar/toolbar.component';
+import {ContactService} from './contact/services/contact.service';
+import {ContactHttpService} from './contact/services/contact-http.service';
+import {ToolbarServiceService} from './contact/services/toolbar-service.service';
 
 const appRoutes: Routes = [
 {path: 'contacts', component: ContactListComponent},
@@ -38,9 +41,6 @@ const appRoutes: Routes = [
     ContactDetailComponent,
     ToolbarComponent,
   ],
-/*  exports: [
-    MatListItem,
-  ],*/
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -58,8 +58,12 @@ const appRoutes: Routes = [
     MatSidenavModule,
     MatIconModule,
     MatDividerModule,
+    MatListModule
   ],
-  providers: [],
+  providers: [ContactService,
+  ContactHttpService,
+  ToolbarServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

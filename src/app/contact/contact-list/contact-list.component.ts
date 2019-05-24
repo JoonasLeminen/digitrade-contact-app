@@ -18,7 +18,7 @@ export class ContactListComponent implements OnInit {
 
   onContactSelected(contact: Contact): void {
     this.selectedContactName = contact.firstName + ' ' + contact.lastName;
-    // alert(contact.firstName);
+    alert(contact.firstName + ' ' + contact.lastName);
   }
 
   ngOnInit() {
