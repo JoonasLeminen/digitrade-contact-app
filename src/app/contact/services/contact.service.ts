@@ -20,7 +20,7 @@ export class ContactService {
   */
   }
 
-  get(): Observable<Contact[]> {
+  get(): Observable<Contact> {
     /*return this.contacts;*/
     /*console.log(this.contactHttpService.get());*/
     return this.contactHttpService.get();

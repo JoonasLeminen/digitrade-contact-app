@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Contact} from '../contact';
 import {ContactService} from '../services/contact.service';
-import {ToolbarOptions} from '../ui/toolbar/toolbar-options';
 
 @Component({
   selector: 'dtca-contact-list',
@@ -9,11 +8,11 @@ import {ToolbarOptions} from '../ui/toolbar/toolbar-options';
   styleUrls: ['./contact-list.component.css']
 })
 export class ContactListComponent implements OnInit {
-  contacts: Contact[];
+  contacts: Contact;
   selectedContactName: string;
 
   constructor(private contactService: ContactService) {
-    this.contacts = [];
+    /*this.contacts = [];*/
     this.selectedContactName = '';
   }
 
@@ -28,6 +27,7 @@ export class ContactListComponent implements OnInit {
     console.log(this.contacts);*/
     this.contactService.get().subscribe((response => {
       this.contacts = response;
+      console.log(response);
     }));
   }
 }
