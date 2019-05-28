@@ -58,6 +58,6 @@
   </mat-form-field>
     </div>
 </mat-card>
-    <button mat-fab color="warn" class="fabDetail"><i class="material-icons">add</i></button>
+    <button *ngIf="editingEnabled" mat-fab (click)="onSave()" color="warn" class="fabDetail"><i class="material-icons">add</i></button>
   </mat-card>
 </div>

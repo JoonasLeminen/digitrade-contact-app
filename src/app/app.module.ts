@@ -12,7 +12,7 @@ import {
   MatDividerModule,
   MatIconModule,
   MatInputModule, MatListModule,
-  MatSidenavModule,
+  MatSidenavModule, MatSnackBarModule,
   MatToolbarModule
 } from '@angular/material';
 import { ContactDetailComponent } from './contact/contact-detail/contact-detail.component';
@@ -58,7 +58,8 @@ const appRoutes: Routes = [
     MatSidenavModule,
     MatIconModule,
     MatDividerModule,
-    MatListModule
+    MatListModule,
+    MatSnackBarModule
   ],
   providers: [ContactService,
   ContactHttpService,

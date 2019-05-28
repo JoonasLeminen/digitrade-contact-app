@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Contact} from '../contact';
 import {ContactService} from '../services/contact.service';
+import {ToolbarOptions} from '../ui/toolbar/toolbar-options';
 
 @Component({
   selector: 'dtca-contact-list',
@@ -22,6 +23,7 @@ export class ContactListComponent implements OnInit {
   }
 
   ngOnInit() {
+    /*this.toolbar.setToolbarOptions(new ToolbarOptions(false, 'Digitrade, kesäkoulu 2019 - Contacts app', []));*/
     /*this.contacts = this.contactService.get();
     console.log(this.contacts);*/
     this.contactService.get().subscribe((response => {
