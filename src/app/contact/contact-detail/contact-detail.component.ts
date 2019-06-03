@@ -62,6 +62,7 @@ export class ContactDetailComponent implements OnInit {
       });
     });
     }
+    this.router.navigate(['/contacts']);
   }
 
   onEdit() {

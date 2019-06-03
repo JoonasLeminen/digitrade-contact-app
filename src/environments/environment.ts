@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  /*apiEndpointUrl: 'https://digitradecontacs2019.azurewebsites.net/api'*/
   apiEndpointUrl: 'https://localhost:44349/api'
 };
 
